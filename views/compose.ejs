@@ -1,0 +1,10 @@
+<%-include("partials/header")-%>
+<div class="text">
+  <h1><%=heading%></h1>
+  <form action="/" method="post">
+    <input id="title" type="text" class="form-control title" name="title" placeholder="Title of your blog" autofocus  autocomplete="off">
+    <textarea class="form-control blog" rows="5" name="blog" placeholder="What happened today?" autocomplete="off"></textarea>
+    <button type="submit" name="btn" class="btn btn-lg btn-primary">Publish</button>
+  </form>
+</div>
+<%-include("partials/footer")-%>

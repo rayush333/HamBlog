@@ -1,0 +1,28 @@
+<%-include("partials/header");-%>
+   <div class="text">
+     <h1><%=heading%></h1>
+     <p>
+       <%=content%>
+       </p>
+     </div>
+     <div class='text'>
+       <h1>Blogs</h1>
+       <% if(blogs.length===0) { %>
+         <p>
+           No blogs to show. Head over to 'Compose' to start writing your first blog!
+           </p>
+         <% } else { %>
+          <% for(var i=0;i<blogs.length;i++) { %>
+            <h3 class="bloghead"><%= blogs[i].title %> </h3>
+            <p class="blogtime">
+              <%= blogs[i].time %>
+              </p>
+              <p>
+                <%= blogs[i].blog.slice(0,200) %>... <form method="post" action="/posts">
+                <button class="read" type="submit" name="read" value=<%=i%>>Read More</button>
+                  </form>
+                </p>
+              <% } } %>
+       </div>
+
+  <%-include("partials/footer");-%>

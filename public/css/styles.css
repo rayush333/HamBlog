@@ -1,0 +1,114 @@
+body,.quote{
+  background-image: url("https://img.freepik.com/free-vector/vintage-ornamental-flowers-background_52683-28040.jpg?size=626&ext=jpg");
+}
+.navbar{
+  background-color: orange;
+  color: white;
+  padding-left: 2%;
+}
+.nav-item{
+  margin: 20px;
+  font-size: 1.5rem;
+}
+.navbar{
+  height: 80px;
+}
+.navbar-brand{
+  font-size: 3rem;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+.nav-link span{
+  opacity: 0;
+}
+.paw {
+  font-size: 1.2rem;
+}
+footer{
+  position: fixed;
+  bottom:0;
+  background-color: orange;
+  font-family: 'Sacramento', cursive;
+  text-align: center;
+  font-size:1.2rem;
+}
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.quote{
+    padding: 10px 0 0 0;
+    background-color: white;
+    color: orange;
+    margin-bottom: 0;
+}
+.foot{
+  font-family: 'Big Shoulders Stencil Text', monospace;
+  color:white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.anchor{
+  color: white;
+  margin: 10px;
+  position: relative;
+  bottom: 10px;
+}
+.a1:hover{
+  color: #00acee;
+}
+.a2:hover{
+  color: #3b5998;
+}
+.a3:hover{
+  color: #ff4c68;
+}
+.a4:hover{
+  color: red;
+}
+.foot{
+  padding-top: 2%;
+}
+.text{
+  padding: 2%;
+  padding-bottom: 0;
+}
+.form-control{
+  margin:20px 0;
+}
+.form-control:focus{
+  box-shadow: 3px 3px 20px 0.2rem orange;
+}
+.btn{
+  border-color: orange;
+  background-color: orange;
+  color: white;
+}
+.btn:hover{
+  border-color: orange;
+  background-color: orange;
+  color: white;
+  box-shadow: 0 0 20px 0.2rem orange;
+}
+::placeholder{
+  color: orange;
+  opacity: 0.3;
+}
+h3,.blogtime{
+  display: inline-block;
+}
+.blogtime{
+  position: absolute;
+  right: 3%;
+}
+.read{
+  border: none;
+  background-color: transparent;
+  color: orange;
+}
+.read:hover{
+  border: none;
+  background-color: transparent;
+  color: orange;
+  font-weight: 500;
+}
