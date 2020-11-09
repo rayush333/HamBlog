@@ -1,6 +1,6 @@
-body,.quote{
+body{
   background-image: url("https://img.freepik.com/free-vector/vintage-ornamental-flowers-background_52683-28040.jpg?size=626&ext=jpg");
-}
+  }
 .navbar{
   background-color: orange;
   color: white;
@@ -24,8 +24,8 @@ body,.quote{
   font-size: 1.2rem;
 }
 footer{
-  position: fixed;
-  bottom:0;
+  position: absolute;
+  bottom: 0;
   background-color: orange;
   font-family: 'Sacramento', cursive;
   text-align: center;
@@ -41,6 +41,9 @@ footer{
     background-color: white;
     color: orange;
     margin-bottom: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: 'Sacramento', cursive;
 }
 .foot{
   font-family: 'Big Shoulders Stencil Text', monospace;
@@ -110,5 +113,31 @@ h3,.blogtime{
   border: none;
   background-color: transparent;
   color: orange;
+  font-weight: 500;
+}
+p::selection,h1::selection,h3::selection{
+  background-color: orange;
+  color: white;
+}
+.laura{
+  display: inline-block
+}
+.wrapper{
+  position: relative;
+  min-height: 89.3vh;
+  padding: 0 0 250px 0;
+}
+.quote{
+  position: absolute;
+  bottom: 108.975px;
+  background-color: transparent;
+}
+.anchor1{
+  color: orange;
+  text-decoration: none;
+}
+.anchor1:hover{
+  color: orange;
+  text-decoration: none;
   font-weight: 500;
 }

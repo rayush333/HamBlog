@@ -32,13 +32,17 @@ app.post("/",function(req,res){
   blogs.push(obj);
   res.redirect("/");
 });
-app.post("/posts",function(req,res){
-  i = req.body.read;
-  res.redirect("/posts");
-});
-app.get("/posts",function(req,res){
+// app.post("/posts",function(req,res){
+//   i = req.body.read;
+//   res.redirect("/posts");
+// });
+app.get("/posts/post-:postid",function(req,res){
+  i=parseInt(req.params.postid);
   res.render("blog",{arr: quote.f1(),heading: blogs[i].title,time: blogs[i].time,content: blogs[i].blog});
 });
+// app.get("/laura/:lassan1/lassan/:lassan2",function(req,res){
+//   console.log(req.params);
+// });
 app.listen(process.env.PORT || 3000,function(){
   console.log("Server running");
 });
