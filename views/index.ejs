@@ -21,13 +21,13 @@
               </p>
               <p>
             <%    if(b.blog.length>300) { %>
-                <%= b.blog.slice(0,300) %>...
+                <%= b.blog.substring(0,300) %>...
             <%    } else { %>
                   <%=b.blog %>
               <%  } %>
 
 
-              <a class="anchor1" href="/posts/post-<%=i%>"> Read More</a> 
+              <a class="anchor1" href="/posts/<%=b.title%>"> Read More</a>
                 <!-- <form class="laura" method="post" action="/posts">
                 <button class="read" type="submit" name="read" value=<%=i%>>Read More</button>
                   </form> -->
