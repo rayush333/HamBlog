@@ -48,8 +48,12 @@ app.post("/",function(req,res){
     time: date.f1(),
     blog: req.body.blog
   });
-  blog.save();
-  res.redirect("/");
+  blog.save(function(err){
+    if(err)
+    console.log(err);
+    else
+    res.redirect("/");
+  });
 });
 // app.post("/posts",function(req,res){
 //   i = req.body.read;
@@ -80,6 +84,14 @@ app.get("/posts/:postname",function(req,res){
 // app.get("/laura/:lassan1/lassan/:lassan2",function(req,res){
 //   console.log(req.params);
 // });
+app.get("/delete/:postname",function(req,res){
+  Blog.deleteOne({title: req.params.postname},function(err){
+    if(err)
+    console.log(err);
+    else
+    res.redirect("/");
+  });
+});
 app.listen(process.env.PORT || 3000,function(){
   console.log("Server running");
 });
