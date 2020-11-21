@@ -42,6 +42,21 @@ app.get("/contact",function(req,res){
 app.get("/compose",function(req,res){
   res.render("compose",{arr: quote.f1(),heading: "Compose"});
 });
+app.get("/edit/:blogname",function(req,res){
+  Blog.findOne({title: req.params.blogname},function(err,b){
+    if(err)
+    console.log(err);
+    else
+    {
+        if(!b)
+        res.send("No such article");
+        else
+        {
+        res.render("edit",{arr: quote.f1(),title: b.title,content: b.blog});
+        }
+    }
+  });
+});
 app.post("/",function(req,res){
   const blog = new Blog({
     title: lodash.capitalize(req.body.title),
@@ -86,6 +101,14 @@ app.get("/posts/:postname",function(req,res){
 // });
 app.get("/delete/:postname",function(req,res){
   Blog.deleteOne({title: req.params.postname},function(err){
+    if(err)
+    console.log(err);
+    else
+    res.redirect("/");
+  });
+});
+app.post("/edit/:name",function(req,res){
+  Blog.replaceOne({title: req.params.name},{title: lodash.capitalize(req.body.title),time: date.f1(),blog: req.body.blog},function(err){
     if(err)
     console.log(err);
     else
